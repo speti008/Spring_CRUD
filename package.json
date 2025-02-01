@@ -13,6 +13,7 @@
     "browser-sync": "^3.0.2",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-cli": "^3.0.0",
     "gulp-environments": "^1.0.1",
     "gulp-postcss": "^9.0.0",
     "gulp-purgecss": "^4.0.0",
