@@ -1,0 +1,15 @@
+### YAML Template.
+#---
+#runtime: java
+#env: flex
+#
+#entrypoint: "java -jar target/demo-0.0.1-SNAPSHOT.jar"
+#
+## Optional: Set the instance class (use "F2" for higher performance, "F1" for lower)
+#instance_class: F2
+##
+## Optional: Set the region for App Engine deployment
+#automatic_scaling:
+#  min_instances: 1
+#  max_instances: 5
+#  target_cpu_utilization: 0.65

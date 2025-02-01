@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+        <body>
+
+            <div th:fragment="controls"
+                 >   
+                
+                
+                
+<!--                <div>
+                    <p id="pagination-summary" class="text-sm leading-5 text-gray-700">
+                        Showing
+                        <span class="font-medium" th:text="${(page.getSize() * page.getNumber()) + 1}">1</span>
+                        to
+                        <span class="font-medium" th:text="${(page.getSize() * page.getNumber()) + page.getNumberOfElements()}">10</span>
+                        of
+                        <span class="font-medium" th:text="${page.getTotalElements()}">97</span>
+                        results
+                    </p>
+                </div>-->
+
+
+                <!-- Desktop pagination -->
+                <div class="hidden sm:flex sm:items-center sm:justify-center sm:w-full">
+
+
+                    <div class="flex items-center space-x-4">
+                        
+                        <a 
+                            
+                           th:href="@{?(page=${page.number - 1})}" 
+                           th:classappend="${page.number == 0} ? 'disabled opacity-50 ' : ''"
+                           class="inline-block">
+                            <button class="rounded-md rounded-r-none border border-r-0 border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" 
+                                    type="button"
+                                    th:disabled="${page.number == 0}">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                  <path fill-rule="evenodd" d="M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </a>
+                        <span class="font-medium" th:text="${page.number+1}">Hello</span>
+                        <a th:href="@{?(page=${page.number+1})}"
+                           th:classappend="${page.number + 1 >= page.totalPages} ? 'disabled opacity-50 cursor-not-allowed' : ''" 
+                           class="inline-block">
+                            <button class="rounded-md rounded-l-none border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" 
+                                    type="button"
+                                    th:disabled="${page.number + 1 >= page.totalPages}">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                  <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </body>
+</html>
+
+
+<!--        <div>
+            <p id="pagination-summary" class="text-sm leading-5 text-gray-700">
+                Showing
+                <span class="font-medium" th:text="${(page.getSize() * page.getNumber()) + 1}">1</span>
+                to
+                <span class="font-medium" th:text="${(page.getSize() * page.getNumber()) + page.getNumberOfElements()}">10</span>
+                of
+                <span class="font-medium" th:text="${page.getTotalElements()}">97</span>
+                results
+            </p>
+        </div>-->
+
+<!--            <div class="flex items-center space-x-4">
+                <a href="?page=1" class="inline-block text-slate-600 hover:text-blue-500">1</a>
+                <a href="?page=2" class="inline-block text-slate-600 hover:text-blue-500">2</a>
+                <a href="?page=3" class="inline-block text-slate-600 hover:text-blue-500">3</a>
+                 More page numbers as needed 
+            </div>-->
+
+            
+           
