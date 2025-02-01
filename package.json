@@ -3,6 +3,7 @@
   "scripts": {
     "watch": "gulp watch",
     "build": "npx gulp build",
+    "start": "java -jar target/java -jar target/your-app-name.jar",
     "build-prod": "NODE_ENV='production' gulp build --env production"
   },
   "devDependencies": {
