@@ -2,7 +2,7 @@
   "name": "taming-thymeleaf-app",
   "scripts": {
     "watch": "gulp watch",
-    "build": "gulp build",
+    "build": "npx gulp build",
     "build-prod": "NODE_ENV='production' gulp build --env production"
   },
   "devDependencies": {
